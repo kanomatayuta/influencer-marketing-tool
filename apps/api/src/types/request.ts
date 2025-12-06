@@ -1,4 +1,5 @@
 import { Request } from 'express';
+import { ParamsDictionary } from 'express-serve-static-core';
 
 // Express Request のグローバル拡張
 declare global {
@@ -12,9 +13,8 @@ declare global {
   }
 }
 
-// Express Request とカスタムプロパティを合成
-// 明示的にすべてのプロパティを含む
-export type AuthRequest = Request & {
+// 完全に型指定されたRequest型を使用
+export interface AuthRequest extends Request<ParamsDictionary, any, any, Record<string, any>> {
   body: any;
   params: Record<string, any>;
   query: Record<string, any>;
@@ -23,9 +23,9 @@ export type AuthRequest = Request & {
   requestId?: string;
   id?: string;
   file?: Express.Multer.File;
-};
+}
 
-export type AuthenticatedRequest = Request & {
+export interface AuthenticatedRequest extends Request<ParamsDictionary, any, any, Record<string, any>> {
   body: any;
   params: Record<string, any>;
   query: Record<string, any>;
@@ -34,9 +34,9 @@ export type AuthenticatedRequest = Request & {
   requestId?: string;
   id?: string;
   file?: Express.Multer.File;
-};
+}
 
-export type RequestWithId = Request & {
+export interface RequestWithId extends Request<ParamsDictionary, any, any, Record<string, any>> {
   body: any;
   params: Record<string, any>;
   query: Record<string, any>;
@@ -45,4 +45,4 @@ export type RequestWithId = Request & {
   requestId?: string;
   id?: string;
   file?: Express.Multer.File;
-};
+}
