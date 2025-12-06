@@ -20,11 +20,10 @@ interface ChannelStats {
 
 const YouTubeAccountManager: React.FC<YouTubeAccountManagerProps> = ({
   socialAccountId,
-  username,
+  _username,
   onRefresh,
 }) => {
   const [stats, setStats] = useState<ChannelStats | null>(null);
-  const [loading, setLoading] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -40,7 +39,6 @@ const YouTubeAccountManager: React.FC<YouTubeAccountManagerProps> = ({
     if (!socialAccountId) return;
 
     try {
-      setLoading(true);
       const response = await api.get(`/youtube/account/${socialAccountId}/stats`);
 
       if (response.data.success) {
@@ -52,8 +50,6 @@ const YouTubeAccountManager: React.FC<YouTubeAccountManagerProps> = ({
         type: 'error',
         text: 'チャネル情報の取得に失敗しました',
       });
-    } finally {
-      setLoading(false);
     }
   };
 

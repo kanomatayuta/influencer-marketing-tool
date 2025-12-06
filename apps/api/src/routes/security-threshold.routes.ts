@@ -6,7 +6,7 @@ import { securityThresholdManagerService } from '../services/security-threshold-
  * 動的な閾値調整と設定管理のエンドポイント
  */
 
-const router = express.Router();
+const router: ReturnType<typeof express.Router> = express.Router();
 
 /**
  * 全閾値の取得

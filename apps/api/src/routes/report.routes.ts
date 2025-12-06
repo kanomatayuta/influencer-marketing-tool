@@ -6,7 +6,7 @@ import {
   getExportHistory,
 } from '../controllers/report.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 9: Report and export routes
 router.post('/performance', authenticate, generatePerformanceReport);

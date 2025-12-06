@@ -10,7 +10,7 @@ import {
   getAdminDashboard,
 } from '../controllers/admin-management.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 12: Admin management routes
 router.get('/users', authenticate, getAllUsers);

@@ -8,7 +8,7 @@ import {
   getPrefectures,
 } from '../controllers/influencer.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 router.get('/search', searchInfluencers);
 router.get('/categories', getCategories);

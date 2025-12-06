@@ -2,7 +2,7 @@ import express from 'express';
 import { authenticate } from '../middleware/auth';
 import { recommendInfluencersForProject } from '../controllers/ai.controller';
 
-const router = express.Router();
+const router: ReturnType<typeof express.Router> = express.Router();
 
 // All routes require authentication
 router.use(authenticate);

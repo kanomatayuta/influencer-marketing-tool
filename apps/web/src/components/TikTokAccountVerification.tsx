@@ -22,20 +22,6 @@ interface TikTokUserInfo {
   profileUrl?: string;
 }
 
-interface TikTokVideoInfo {
-  id: string;
-  title: string;
-  stats: {
-    viewCount: number;
-    likeCount: number;
-    commentCount: number;
-    engagementRate: number;
-  };
-  author: TikTokUserInfo;
-  createdAt: string;
-  downloadableUrl: string;
-}
-
 const TikTokAccountVerification: React.FC<TikTokVerificationProps> = ({
   onSuccess,
   onError,

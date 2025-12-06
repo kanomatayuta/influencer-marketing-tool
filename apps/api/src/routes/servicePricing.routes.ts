@@ -10,7 +10,7 @@ import {
   validateServicePricing,
 } from '../controllers/servicePricing.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // v3.0 新機能: 料金体系管理ルート
 

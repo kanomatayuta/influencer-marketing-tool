@@ -9,7 +9,7 @@ import {
   createLegalDocument,
 } from '../controllers/legal-compliance.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 14: Legal and compliance routes
 router.get('/documents', getLegalDocuments);

@@ -5,7 +5,7 @@ import {
   updateCompanyProfile
 } from '../controllers/company-profile.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Get company profile for authenticated user
 router.get('/me', authenticate, getCompanyProfile);

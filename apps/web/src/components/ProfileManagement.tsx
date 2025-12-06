@@ -11,7 +11,6 @@ import {
   deleteSocialAccount,
   addPortfolio,
   deletePortfolio,
-  uploadPortfolioImage,
   completeRegistration,
 } from '../services/api';
 import { Platform, Gender } from '../types';

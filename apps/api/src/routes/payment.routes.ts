@@ -9,7 +9,7 @@ import {
   handleStripeWebhook,
 } from '../controllers/payment.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Webhook endpoint (no auth required)
 router.post('/webhook', handleStripeWebhook);

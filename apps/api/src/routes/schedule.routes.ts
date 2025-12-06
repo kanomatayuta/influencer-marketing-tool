@@ -8,7 +8,7 @@ import {
   sendMilestoneNotifications,
 } from '../controllers/schedule.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // v3.0 新機能: スケジュール管理ルート
 

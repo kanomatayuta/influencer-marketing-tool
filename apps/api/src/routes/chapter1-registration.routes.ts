@@ -15,7 +15,7 @@ import {
 import { authenticate } from '../middleware/auth';
 import AdaptiveRateLimiter from '../middleware/adaptive-rate-limiter';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 const rateLimiter = new AdaptiveRateLimiter();
 
 // Multer設定：ファイルアップロード

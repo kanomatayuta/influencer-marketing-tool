@@ -7,7 +7,7 @@ import {
   getSuspiciousUsers,
 } from '../controllers/security-monitoring.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 9: Security monitoring routes
 router.post('/event', authenticate, logSecurityEvent);

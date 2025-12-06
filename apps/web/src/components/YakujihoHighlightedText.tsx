@@ -205,12 +205,6 @@ export const YakujihoHighlightedText: React.FC<YakujihoHighlightedTextProps> = (
 /**
  * 薬機法チェック結果サマリーコンポーネント
  */
-interface YakujihoCheckSummaryProps {
-  violations: YakujihoViolationMatch[];
-  riskScore: number;
-  className?: string;
-}
-
 export const YakujihoCheckSummary: React.FC<{result: any, className?: string}> = ({
   result,
   className = ''

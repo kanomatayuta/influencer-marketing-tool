@@ -13,7 +13,7 @@ import {
   validateFieldTypes 
 } from '../middleware/command-injection-protection';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // セキュリティヘッダーを全ての認証ルートに適用
 router.use(securityHeaders);

@@ -52,6 +52,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ token }) => {
     });
 
     newSocket.on('connect', () => {
+      // eslint-disable-next-line no-console
       console.log('Connected to server');
     });
 
@@ -95,7 +96,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ token }) => {
       socket.emit('join-project', selectedChat.id);
       markAsReadMutation.mutate(selectedChat.id);
     }
-  }, [selectedChat, socket]);
+  }, [selectedChat, socket, markAsReadMutation]);
 
   useEffect(() => {
     scrollToBottom();

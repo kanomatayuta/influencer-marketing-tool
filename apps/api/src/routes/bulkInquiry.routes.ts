@@ -9,7 +9,7 @@ import {
   getInquiryStats,
 } from '../controllers/bulkInquiry.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // v3.0 新機能: 一斉問い合わせルート
 

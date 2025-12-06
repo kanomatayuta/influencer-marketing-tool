@@ -9,7 +9,7 @@ interface HeaderProps {
   breadcrumbs?: BreadcrumbItem[];
 }
 
-const Header: React.FC<HeaderProps> = ({ title, subtitle, userEmail, breadcrumbs }) => {
+const Header: React.FC<HeaderProps> = ({ title, _subtitle, userEmail, breadcrumbs }) => {
   return (
     <header className="bg-white border-b border-gray-200 px-6 sticky top-0 z-30" style={{ height: '56px' }}>
       <div className="flex items-center justify-between h-full">

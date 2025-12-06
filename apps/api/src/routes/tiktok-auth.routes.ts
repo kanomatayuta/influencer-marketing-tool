@@ -8,7 +8,7 @@ import {
 } from '../controllers/tiktok-auth.controller';
 import { authenticate } from '../middleware/auth';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 /**
  * Chapter 1-6: TikTok 認証エンドポイント

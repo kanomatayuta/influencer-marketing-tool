@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ModernLandingPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);

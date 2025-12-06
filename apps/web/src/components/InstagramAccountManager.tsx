@@ -20,11 +20,10 @@ interface AccountStats {
 
 const InstagramAccountManager: React.FC<InstagramAccountManagerProps> = ({
   socialAccountId,
-  username,
+  _username,
   onRefresh,
 }) => {
   const [stats, setStats] = useState<AccountStats | null>(null);
-  const [loading, setLoading] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -40,7 +39,6 @@ const InstagramAccountManager: React.FC<InstagramAccountManagerProps> = ({
     if (!socialAccountId) return;
 
     try {
-      setLoading(true);
       const response = await api.get(`/instagram/account/${socialAccountId}/stats`);
 
       if (response.data.success) {
@@ -52,8 +50,6 @@ const InstagramAccountManager: React.FC<InstagramAccountManagerProps> = ({
         type: 'error',
         text: 'アカウント情報の取得に失敗しました',
       });
-    } finally {
-      setLoading(false);
     }
   };
 

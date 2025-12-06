@@ -3,7 +3,7 @@ import { handleCSPReport, handleXSSAttempt, getSecurityStats } from '../controll
 import { generalRateLimit, authRateLimit } from '../middleware/security';
 import { authenticate } from '../middleware/auth';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // CSP違反レポートエンドポイント（認証不要、レート制限あり）
 router.post('/csp-report', 

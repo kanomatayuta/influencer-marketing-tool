@@ -9,7 +9,7 @@ import {
   getScoutDetails,
 } from '../controllers/scout.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 3: Scout routes
 router.post('/', authenticate, sendScoutInvitation);

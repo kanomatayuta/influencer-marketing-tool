@@ -5,7 +5,7 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-const router = express.Router();
+const router: ReturnType<typeof express.Router> = express.Router();
 
 router.post('/profile-image', authenticate, upload.single('image'), async (req: any, res) => {
   try {

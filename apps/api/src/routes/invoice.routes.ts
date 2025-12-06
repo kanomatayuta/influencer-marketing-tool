@@ -8,7 +8,7 @@ import {
   getInvoiceSummary,
 } from '../controllers/invoice.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 7: Invoice routes
 router.post('/', authenticate, createInvoice);

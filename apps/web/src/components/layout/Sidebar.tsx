@@ -1,18 +1,16 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { 
-  MdHome, 
-  MdWork, 
-  MdFolder, 
-  MdMessage, 
-  MdPerson, 
-  MdEmojiEvents, 
-  MdAttachMoney, 
-  MdBarChart, 
+import {
+  MdHome,
+  MdFolder,
+  MdMessage,
+  MdPerson,
+  MdEmojiEvents,
+  MdAttachMoney,
+  MdBarChart,
   MdSettings,
   MdSearch,
-  MdStar,
   MdBusiness,
   MdGroup,
   MdLogout,
@@ -49,7 +47,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle, user, onLogout }) =
   };
 
   const isInfluencer = user?.role === 'INFLUENCER';
-  const isCompany = user?.role === "COMPANY" || user?.role === 'COMPANY';
 
   const influencerNavigation: NavigationItem[] = [
     { label: 'ホーム', path: '/influencer/dashboard', icon: MdHome },

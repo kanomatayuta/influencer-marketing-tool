@@ -24,9 +24,9 @@ const GanttChart: React.FC<GanttChartProps> = ({
   tasks,
   viewMode = 'Day',
   onTaskClick,
-  onDateChange,
-  onProgressChange,
-  readOnly = false
+  _onDateChange,
+  _onProgressChange,
+  _readOnly = false
 }) => {
   const [currentViewMode, setCurrentViewMode] = useState(viewMode);
   const [hoveredTask, setHoveredTask] = useState<string | null>(null);
@@ -44,7 +44,6 @@ const GanttChart: React.FC<GanttChartProps> = ({
     }
 
     const allDates = tasks.flatMap(task => [new Date(task.start), new Date(task.end)]);
-    const minDate = new Date(Math.min(...allDates.map(d => d.getTime())));
     const maxDate = new Date(Math.max(...allDates.map(d => d.getTime())));
 
     // 今日の日付を取得

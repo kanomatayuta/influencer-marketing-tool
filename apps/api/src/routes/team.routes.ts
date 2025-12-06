@@ -10,7 +10,7 @@ import {
   deleteTeam,
 } from '../controllers/team.controller';
 
-const router = express.Router();
+const router: ReturnType<typeof express.Router> = express.Router();
 
 // All routes require authentication
 router.use(authenticate);

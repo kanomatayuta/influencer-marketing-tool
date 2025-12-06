@@ -6,7 +6,7 @@ import {
   getComparisonData,
 } from '../controllers/analytics.controller';
 
-const router = express.Router();
+const router: ReturnType<typeof express.Router> = express.Router();
 
 // All routes require authentication
 router.use(authenticate);

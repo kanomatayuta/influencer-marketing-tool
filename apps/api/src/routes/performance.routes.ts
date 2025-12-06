@@ -6,7 +6,7 @@ import {
   getDashboardOverview,
 } from '../controllers/performance.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 9: Performance metrics routes
 router.get('/influencer', authenticate, getInfluencerMetrics);

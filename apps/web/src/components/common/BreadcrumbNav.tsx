@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 export interface BreadcrumbItem {
   label: string;
@@ -18,8 +17,6 @@ const BreadcrumbNav: React.FC<BreadcrumbNavProps> = React.memo(({
   className = '',
   showHome = true
 }) => {
-  const router = useRouter();
-
   const defaultItems: BreadcrumbItem[] = showHome
     ? [{ label: 'ホーム', href: '/dashboard' }, ...items]
     : items;

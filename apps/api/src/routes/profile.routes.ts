@@ -14,7 +14,7 @@ import {
   getProfileCompletion,
 } from '../controllers/profile.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // All routes require authentication
 router.use(authenticate);

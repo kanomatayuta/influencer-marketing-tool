@@ -12,7 +12,7 @@ import {
   updateProjectProgress,
 } from '../controllers/admin.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // All admin routes require authentication and ADMIN role
 router.use(authenticate);

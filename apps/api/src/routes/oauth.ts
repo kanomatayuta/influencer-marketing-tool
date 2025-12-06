@@ -4,7 +4,7 @@ import { authenticate } from '../middleware/auth';
 import crypto from 'crypto';
 import axios from 'axios';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 const prisma = new PrismaClient();
 
 // OAuth設定（環境変数から読み込み）

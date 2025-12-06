@@ -8,7 +8,7 @@ import {
   getMyContracts,
 } from '../controllers/contract.controller';
 
-const router = Router();
+const router: ReturnType<typeof Router> = Router();
 
 // Chapter 5: Contract routes
 router.post('/', authenticate, createContract);

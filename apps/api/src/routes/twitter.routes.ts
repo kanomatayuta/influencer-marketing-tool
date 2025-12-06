@@ -6,7 +6,7 @@ import {
   verifyAndAddAccount,
 } from '../controllers/twitter.controller';
 
-const router = express.Router();
+const router: ReturnType<typeof express.Router> = express.Router();
 
 /**
  * Public endpoints (no authentication required for testing)
