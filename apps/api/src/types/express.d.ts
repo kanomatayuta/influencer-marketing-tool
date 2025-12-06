@@ -23,10 +23,14 @@ export interface AuthRequest extends Request<ParamsDictionary, any, any, Record<
   params: Record<string, any>;
   query: Record<string, any>;
   headers: Record<string, any>;
+  path: string;
+  method: string;
+  ip: string;
   user?: any;
   requestId?: string;
   id?: string;
   file?: Express.Multer.File;
+  get(field: string): string | undefined;
 }
 
 export interface AuthenticatedRequest extends Request<ParamsDictionary, any, any, Record<string, any>> {
@@ -34,10 +38,14 @@ export interface AuthenticatedRequest extends Request<ParamsDictionary, any, any
   params: Record<string, any>;
   query: Record<string, any>;
   headers: Record<string, any>;
+  path: string;
+  method: string;
+  ip: string;
   user?: any;
   requestId?: string;
   id?: string;
   file?: Express.Multer.File;
+  get(field: string): string | undefined;
 }
 
 export interface RequestWithId extends Request<ParamsDictionary, any, any, Record<string, any>> {
@@ -45,10 +53,14 @@ export interface RequestWithId extends Request<ParamsDictionary, any, any, Recor
   params: Record<string, any>;
   query: Record<string, any>;
   headers: Record<string, any>;
+  path: string;
+  method: string;
+  ip: string;
   user?: any;
   requestId?: string;
   id?: string;
   file?: Express.Multer.File;
+  get(field: string): string | undefined;
 }
 
 export {};
