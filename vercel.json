@@ -2,7 +2,7 @@
   "version": 2,
   "framework": "nextjs",
   "buildCommand": "cd apps/web && npm run build",
-  "installCommand": "npm install",
+  "installCommand": "cd apps/web && npm install",
   "outputDirectory": "apps/web/.next",
   "regions": ["hnd1"]
 }
