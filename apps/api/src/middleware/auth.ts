@@ -1,11 +1,9 @@
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { verifyToken, JWTPayload } from '../utils/jwt';
 import { sendUnauthorized, sendForbidden } from '../utils/api-response';
+import { AuthRequest } from '../types/request';
 
-export interface AuthRequest extends Request {
-  user?: JWTPayload;
-  requestId?: string;
-}
+export { AuthRequest } from '../types/request';
 
 export const authenticate = (
   req: AuthRequest,

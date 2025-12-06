@@ -3,12 +3,9 @@
  * エラートレースとログの関連付けに使用
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { randomUUID } from 'crypto';
-
-export interface RequestWithId extends Request {
-  requestId: string;
-}
+import { RequestWithId } from '../types/request';
 
 export const requestIdMiddleware = (
   req: RequestWithId,
@@ -16,7 +13,7 @@ export const requestIdMiddleware = (
   next: NextFunction
 ): void => {
   // リクエストにID がある場合はそれを使用、なければ新規生成
-  const requestId = req.headers['x-request-id'] as string || randomUUID();
+  const requestId = (req.headers['x-request-id'] as string) || randomUUID();
 
   req.requestId = requestId;
 

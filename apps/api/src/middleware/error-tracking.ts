@@ -1,20 +1,12 @@
 import { Request, Response, NextFunction } from 'express';
 import * as Sentry from '@sentry/node';
 import { captureError, trackAPIEndpoint, setSentryUser } from '../config/sentry';
+import { AuthenticatedRequest } from '../types/request';
 
 /**
  * エラートラッキングミドルウェア
  * Expressアプリケーション全体でのエラー監視
  */
-
-interface AuthenticatedRequest extends Request {
-  user?: {
-    id: string;
-    email: string;
-    role: string;
-    isVerified: boolean;
-  };
-}
 
 /**
  * リクエスト処理時間の測定とトラッキング
