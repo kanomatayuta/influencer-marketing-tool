@@ -1,6 +1,8 @@
 {
-  "buildCommand": "npx pnpm@8 build",
-  "installCommand": "npx pnpm@8 install --frozen-lockfile",
-  "outputDirectory": "apps/web/.next"
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "outputDirectory": "apps/web/.next",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
-// Build trigger - Sun Dec  7 05:31:01 JST 2025
