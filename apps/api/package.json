@@ -21,15 +21,14 @@
     "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.940.0",
     "@influencer-tool/shared-types": "workspace:*",
     "@influencer-tool/shared-utils": "workspace:*",
-    "@aws-sdk/client-s3": "^3.940.0",
     "@prisma/client": "^6.12.0",
     "@sentry/node": "^9.42.0",
     "@sentry/tracing": "^7.120.3",
     "@types/bcrypt": "^6.0.0",
     "@types/dompurify": "^3.0.5",
-    "@types/express": "^4.17.21",
     "@types/jsdom": "^21.1.7",
     "@types/multer": "^2.0.0",
     "@types/node-fetch": "^2.6.13",
@@ -62,6 +61,7 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.25",
     "@types/node": "^24.7.2",
     "prisma": "^6.12.0",
     "ts-node": "^10.9.2",
