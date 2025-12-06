@@ -313,12 +313,3 @@ export const getRegistrationStatus = async (req: Request, res: Response): Promis
     res.status(500).json({ error: 'Internal server error' });
   }
 };
-
-// Type augmentation for Express Request
-declare global {
-  namespace Express {
-    interface Request {
-      user?: { id: string; email: string; role: string };
-    }
-  }
-}
