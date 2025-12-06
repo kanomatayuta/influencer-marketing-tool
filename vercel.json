@@ -1,5 +1,7 @@
 {
+  "version": 2,
   "buildCommand": "pnpm --filter @influencer-tool/web build",
   "installCommand": "pnpm install",
-  "outputDirectory": "apps/web/.next"
+  "outputDirectory": "apps/web/.next",
+  "framework": "nextjs"
 }
