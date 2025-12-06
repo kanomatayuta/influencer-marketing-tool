@@ -3,3 +3,4 @@
   "installCommand": "npx pnpm@8 install --frozen-lockfile",
   "outputDirectory": "apps/web/.next"
 }
+// Build trigger - Sun Dec  7 05:31:01 JST 2025
