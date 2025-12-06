@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "build": "tsc",
+    "build": "prisma generate && tsc",
     "clean": "rm -rf dist",
     "lint": "echo 'Linting skipped for API (uses type checking instead)'",
     "typecheck": "tsc --noEmit",
