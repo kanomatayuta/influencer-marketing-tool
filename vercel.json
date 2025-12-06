@@ -1,6 +1,5 @@
 {
   "buildCommand": "npx pnpm@8 build",
   "installCommand": "npx pnpm@8 install --frozen-lockfile",
-  "outputDirectory": "apps/web/.next",
-  "root": "apps/web"
+  "outputDirectory": "apps/web/.next"
 }
