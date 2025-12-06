@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter @influencer-tool/web build",
-  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "buildCommand": "cd apps/web && npm run build",
+  "installCommand": "npm install",
   "outputDirectory": "apps/web/.next",
-  "framework": "nextjs"
+  "regions": ["hnd1"]
 }
