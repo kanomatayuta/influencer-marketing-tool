@@ -1,20 +1,23 @@
 import { Request } from 'express';
-import { JWTPayload } from '../utils/jwt';
 
-// 交差型を使用してExpressのRequest型と互換性を保つ
-export type AuthRequest = Request & {
-  user?: JWTPayload;
+// Express Request を直接拡張
+export interface AuthRequest extends Request {
+  user?: any;
   requestId?: string;
+  id?: string;
   file?: Express.Multer.File;
-};
+}
 
-export type AuthenticatedRequest = Request & {
-  user?: JWTPayload;
+export interface AuthenticatedRequest extends Request {
+  user?: any;
   requestId?: string;
+  id?: string;
   file?: Express.Multer.File;
-};
+}
 
-export type RequestWithId = Request & {
+export interface RequestWithId extends Request {
   id?: string;
   requestId?: string;
-};
+  user?: any;
+  file?: Express.Multer.File;
+}
