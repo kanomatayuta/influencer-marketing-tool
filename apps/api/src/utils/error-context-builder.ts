@@ -140,7 +140,8 @@ export function extractRequestInfo(req: Request): RequestInfo {
     if (sensitiveHeaders.includes(key.toLowerCase())) {
       sanitizedHeaders[key] = '***';
     } else {
-      sanitizedHeaders[key] = Array.isArray(value) ? value.join(', ') : (value || '');
+      const stringValue = Array.isArray(value) ? value.join(', ') : String(value || '');
+      sanitizedHeaders[key] = stringValue;
     }
   });
 
