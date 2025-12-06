@@ -1,20 +1,20 @@
 import { Request } from 'express';
 import { JWTPayload } from '../utils/jwt';
 
-// Express Request の任意のプロパティにアクセス可能にする
-export interface AuthRequest extends Request<any, any, any, any> {
+// 交差型を使用してExpressのRequest型と互換性を保つ
+export type AuthRequest = Request & {
   user?: JWTPayload;
   requestId?: string;
   file?: Express.Multer.File;
-}
+};
 
-export interface AuthenticatedRequest extends Request<any, any, any, any> {
+export type AuthenticatedRequest = Request & {
   user?: JWTPayload;
   requestId?: string;
   file?: Express.Multer.File;
-}
+};
 
-export interface RequestWithId extends Request<any, any, any, any> {
+export type RequestWithId = Request & {
   id?: string;
   requestId?: string;
-}
+};
