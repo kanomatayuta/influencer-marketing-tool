@@ -5,7 +5,7 @@
 
 import { Response, NextFunction } from 'express';
 import { randomUUID } from 'crypto';
-import { RequestWithId } from '../types/request';
+import { RequestWithId } from '../express.d';
 
 export const requestIdMiddleware = (
   req: RequestWithId,

@@ -1,9 +1,9 @@
 import { Response, NextFunction } from 'express';
 import { verifyToken, JWTPayload } from '../utils/jwt';
 import { sendUnauthorized, sendForbidden } from '../utils/api-response';
-import { AuthRequest } from '../types/request';
+import { AuthRequest } from '../express.d';
 
-export { AuthRequest } from '../types/request';
+export { AuthRequest } from '../express.d';
 
 export const authenticate = (
   req: AuthRequest,

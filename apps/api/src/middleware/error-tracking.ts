@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import * as Sentry from '@sentry/node';
 import { captureError, trackAPIEndpoint, setSentryUser } from '../config/sentry';
-import { AuthenticatedRequest } from '../types/request';
+import { AuthenticatedRequest } from '../express.d';
 
 /**
  * エラートラッキングミドルウェア

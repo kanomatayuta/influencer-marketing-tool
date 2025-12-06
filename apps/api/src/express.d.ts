@@ -1,5 +1,5 @@
-import { Request } from 'express';
 import { ParamsDictionary } from 'express-serve-static-core';
+import { Request } from 'express';
 
 // Express Request のグローバル拡張
 declare global {
@@ -9,6 +9,10 @@ declare global {
       requestId?: string;
       file?: Express.Multer.File;
       id?: string;
+      body?: any;
+      params?: Record<string, any>;
+      query?: Record<string, any>;
+      headers?: Record<string, any>;
     }
   }
 }
@@ -46,3 +50,5 @@ export interface RequestWithId extends Request<ParamsDictionary, any, any, Recor
   id?: string;
   file?: Express.Multer.File;
 }
+
+export {};
