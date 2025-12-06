@@ -84,7 +84,6 @@ export function userContextMiddleware(
       id: req.user.id,
       email: req.user.email,
       role: req.user.role,
-      isVerified: req.user.isVerified,
     });
     
     // リクエストコンテキストを追加

@@ -15,4 +15,5 @@ export interface AuthenticatedRequest extends Request<any, any, any, any> {
 
 export interface RequestWithId extends Request<any, any, any, any> {
   id?: string;
+  requestId?: string;
 }
