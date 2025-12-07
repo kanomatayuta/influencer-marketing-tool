@@ -7,10 +7,6 @@
   "engines": {
     "node": "20.x"
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "dev": "pnpm --recursive --parallel dev",
     "dev:docker": "docker-compose -f docker-compose.dev.yml up",

@@ -15,7 +15,7 @@
   "keywords": ["api", "client"],
   "private": true,
   "dependencies": {
-    "@influencer-tool/shared-types": "workspace:*",
+    "@influencer-tool/shared-types": "file:../shared-types",
     "axios": "^1.6.0"
   },
   "devDependencies": {
