@@ -16,7 +16,7 @@
     "dashboard": "pnpm --filter @influencer-tool/dashboard dev",
     "build": "pnpm --recursive build",
     "build:api": "pnpm --filter @influencer-tool/api build",
-    "build:dashboard": "pnpm --filter @influencer-tool/dashboard build",
+    "build:dashboard": "cd apps/dashboard && npm run build",
     "start": "pnpm --recursive start",
     "start:api": "pnpm --filter @influencer-tool/api start",
     "start:dashboard": "pnpm --filter @influencer-tool/dashboard start",
