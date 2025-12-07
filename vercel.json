@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build --prefix apps/dashboard",
+  "installCommand": "npm install --prefix apps/dashboard",
+  "outputDirectory": "apps/dashboard/.next"
+}
