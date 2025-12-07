@@ -1,9 +1,7 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "root": "apps/web",
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "outputDirectory": ".next",
-  "regions": ["hnd1"]
+  "devCommand": "npm run dev"
 }
