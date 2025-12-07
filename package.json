@@ -5,8 +5,7 @@
   "private": true,
   "packageManager": "pnpm@10.24.0",
   "engines": {
-    "node": "20.x",
-    "pnpm": "10.24.0"
+    "node": "20.x"
   },
   "scripts": {
     "dev": "pnpm --recursive --parallel dev",
