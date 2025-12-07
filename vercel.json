@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd apps/dashboard && npm install --legacy-peer-deps && npm run build",
-  "installCommand": "echo 'Skipping root install'",
+  "buildCommand": "cd apps/dashboard && rm -rf node_modules package-lock.json && npm ci --legacy-peer-deps && npm run build",
+  "installCommand": "true",
   "outputDirectory": "apps/dashboard/.next"
 }
