@@ -1,5 +1,0 @@
-{
-  "buildCommand": "pnpm --filter @influencer-tool/dashboard build",
-  "installCommand": "pnpm install --recursive",
-  "outputDirectory": "apps/dashboard/.next"
-}
