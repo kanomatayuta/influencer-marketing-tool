@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Influencer Marketing Tool - Monorepo for API and Dashboard applications",
   "private": true,
-  "packageManager": "pnpm@10.24.0",
   "engines": {
     "node": "20.x"
   },
