@@ -1,0 +1,15 @@
+apps/api
+apps/api/**
+packages
+packages/**
+.git
+.github
+docs
+configs
+node_modules
+pnpm-lock.yaml
+README.md
+Dockerfile*
+docker-compose*
+Makefile
+Procfile
