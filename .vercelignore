@@ -13,3 +13,5 @@ Dockerfile*
 docker-compose*
 Makefile
 Procfile
+.env.local
+.env.*.local

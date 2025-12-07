@@ -1,7 +1,7 @@
 {
   "name": "influencer-marketing-tool",
   "version": "1.0.0",
-  "description": "Influencer Marketing Tool - Monorepo for API and Web applications",
+  "description": "Influencer Marketing Tool - Monorepo for API and Dashboard applications",
   "private": true,
   "packageManager": "pnpm@10.24.0",
   "engines": {
@@ -14,13 +14,13 @@
     "dev:docker:build": "docker-compose -f docker-compose.dev.yml build",
     "dev:docker:down": "docker-compose -f docker-compose.dev.yml down -v",
     "api": "pnpm --filter @influencer-tool/api dev",
-    "web": "pnpm --filter @influencer-tool/web dev",
+    "dashboard": "pnpm --filter @influencer-tool/dashboard dev",
     "build": "pnpm --recursive build",
     "build:api": "pnpm --filter @influencer-tool/api build",
-    "build:web": "pnpm --filter @influencer-tool/web build",
+    "build:dashboard": "pnpm --filter @influencer-tool/dashboard build",
     "start": "pnpm --recursive start",
     "start:api": "pnpm --filter @influencer-tool/api start",
-    "start:web": "pnpm --filter @influencer-tool/web start",
+    "start:dashboard": "pnpm --filter @influencer-tool/dashboard start",
     "start:prod": "docker-compose -f docker-compose.yml up",
     "start:prod:build": "docker-compose -f docker-compose.yml build",
     "start:prod:down": "docker-compose -f docker-compose.yml down -v",
@@ -29,9 +29,9 @@
     "clean": "pnpm --recursive clean && rm -rf node_modules",
     "clean:install": "pnpm clean && pnpm install",
     "typecheck": "pnpm --filter '@influencer-tool/shared-types' build && pnpm --filter '@influencer-tool/shared-utils' build && pnpm --filter '!@influencer-tool/api' --recursive typecheck",
-    "prisma:generate": "pnpm --filter @influencer-tool/api prisma generate && pnpm --filter @influencer-tool/web prisma generate",
-    "prisma:migrate": "pnpm --filter @influencer-tool/web prisma migrate dev",
-    "prisma:studio": "pnpm --filter @influencer-tool/web prisma studio"
+    "prisma:generate": "pnpm --filter @influencer-tool/api prisma generate && pnpm --filter @influencer-tool/dashboard prisma generate",
+    "prisma:migrate": "pnpm --filter @influencer-tool/dashboard prisma migrate dev",
+    "prisma:studio": "pnpm --filter @influencer-tool/dashboard prisma studio"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
