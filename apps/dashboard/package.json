@@ -17,9 +17,9 @@
     "db:migrate": "prisma migrate dev"
   },
   "dependencies": {
-    "@influencer-tool/api-client": "1.0.0",
-    "@influencer-tool/shared-types": "1.0.0",
-    "@influencer-tool/shared-utils": "1.0.0",
+    "@influencer-tool/api-client": "file:../../packages/api-client",
+    "@influencer-tool/shared-types": "file:../../packages/shared-types",
+    "@influencer-tool/shared-utils": "file:../../packages/shared-utils",
     "@prisma/client": "^5.8.0",
     "prisma": "^5.8.0",
     "@emoji-mart/data": "^1.2.1",
