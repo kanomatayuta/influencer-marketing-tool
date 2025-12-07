@@ -1,7 +1,5 @@
 apps/api
 apps/api/**
-packages
-packages/**
 .git
 .github
 docs
