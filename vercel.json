@@ -1,5 +1,5 @@
 {
   "buildCommand": "npm run build:dashboard",
-  "installCommand": "npm install && cd apps/dashboard && npm install --legacy-peer-deps",
+  "installCommand": "npm install --legacy-peer-deps && cd apps/dashboard && npm install --legacy-peer-deps",
   "outputDirectory": "apps/dashboard/.next"
 }
