@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm ci --legacy-peer-deps && cd apps/dashboard && npm install --legacy-peer-deps",
-  "buildCommand": "cd apps/dashboard && npm install --legacy-peer-deps && npm run build",
+  "installCommand": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --save-dev && cd apps/dashboard && npm install --legacy-peer-deps && npm install --legacy-peer-deps --save-dev",
+  "buildCommand": "cd apps/dashboard && npm run build",
   "outputDirectory": "apps/dashboard/.next"
 }
