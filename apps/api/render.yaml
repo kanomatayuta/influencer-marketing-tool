@@ -2,12 +2,12 @@ services:
   - type: web
     name: influencer-marketing-backend
     env: node
-    buildCommand: npm install
-    startCommand: node simple-backend.js
-    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    plan: starter
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
-        sync: false
-    healthCheckPath: /health
+        value: 3001
+    healthCheckPath: /api/health
