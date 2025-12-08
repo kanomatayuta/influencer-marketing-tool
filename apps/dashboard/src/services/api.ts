@@ -2,21 +2,11 @@ import axios from 'axios';
 
 // Determine the API base URL based on environment
 const getApiBaseUrl = () => {
-  // If explicitly set via environment variable, use that
+  // If explicitly set via environment variable, use that (priority)
   if (process.env.NEXT_PUBLIC_API_URL) {
     return process.env.NEXT_PUBLIC_API_URL;
   }
-  
-  // Check if we're in a browser environment
-  if (typeof window !== 'undefined') {
-    const hostname = window.location.hostname;
-    
-    // If we're on Vercel (production), use the actual backend on Render
-    if (hostname.includes('vercel.app')) {
-      return 'https://influencer-marketing-tool.onrender.com';
-    }
-  }
-  
+
   // Default to localhost for development
   return 'http://localhost:3001/api';
 };
@@ -213,38 +203,7 @@ export const getDashboardData = async () => {
 
 export const login = async (email: string, password: string) => {
   console.log('Login API called with:', { email, baseURL: API_BASE_URL });
-  
-  // Vercel環境やローカルでバックエンドが利用できない場合のモックデータ
-  if (typeof window !== 'undefined' && 
-      (window.location.hostname.includes('vercel.app') || !window.navigator.onLine)) {
-    console.log('Using mock data for login');
-    
-    await new Promise(resolve => setTimeout(resolve, 1000)); // ローディング演出
-    
-    // テストアカウントのバリデーション
-    const mockUsers = [
-      { email: 'company@test.com', password: 'test123', role: 'COMPANY', id: '1' },
-      { email: 'client@test.com', password: 'test123', role: "COMPANY", id: '2' },
-      { email: 'influencer@test.com', password: 'test123', role: 'INFLUENCER', id: '3' }
-    ];
-    
-    const user = mockUsers.find(u => u.email === email && u.password === password);
-    
-    if (!user) {
-      throw new Error('メールアドレスまたはパスワードが間違っています。');
-    }
-    
-    return {
-      token: 'mock-jwt-token-' + user.id,
-      user: {
-        id: user.id,
-        email: user.email,
-        role: user.role
-      }
-    };
-  }
-  
-  
+
   try {
     const response = await api.post('/auth/login', { email, password });
     console.log('Login successful:', response.data);
