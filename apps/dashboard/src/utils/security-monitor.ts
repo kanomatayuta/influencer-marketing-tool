@@ -184,18 +184,25 @@ export function monitorDOMChanges(): void {
  * 許可されたスクリプトソースかチェック
  */
 function isAllowedScriptSource(src: string): boolean {
+  // 相対パスは許可（Next.js の内部スクリプト）
+  if (!src.startsWith('http://') && !src.startsWith('https://')) {
+    return true;
+  }
+
   const allowedDomains = [
     'localhost',
     'vercel.live',
     'cdn.jsdelivr.net',
-    'unpkg.com'
+    'unpkg.com',
+    'influencer-marketing-tool-smoky.vercel.app',
+    'influencer-marketing-tool-y33f.onrender.com'
   ];
 
   try {
     const url = new URL(src, window.location.href);
     return allowedDomains.some(domain => url.hostname.includes(domain));
   } catch {
-    return false;
+    return true; // URL パースエラーの場合は許可（相対パスのため）
   }
 }
 
