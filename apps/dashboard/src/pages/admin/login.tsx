@@ -63,10 +63,6 @@ const AdminLoginPage: React.FC = () => {
     }
   };
 
-  const fillTestAccount = () => {
-    setEmail('admin@example.com');
-    setPassword('admin123456');
-  };
 
   if (!isMounted) {
     return (
@@ -112,27 +108,6 @@ const AdminLoginPage: React.FC = () => {
           ログイン
         </SubmitButton>
       </form>
-
-      <div className="mt-6">
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-300" />
-          </div>
-          <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-white text-gray-500">テストアカウント（開発用）</span>
-          </div>
-        </div>
-
-        <div className="mt-4">
-          <button
-            type="button"
-            onClick={fillTestAccount}
-            className="w-full px-4 py-2 bg-blue-50 text-blue-700 rounded-md text-sm font-medium hover:bg-blue-100 transition-colors border border-blue-200"
-          >
-            テスト管理者アカウントを入力
-          </button>
-        </div>
-      </div>
 
       <div className="mt-6 text-center text-sm">
         <Link

@@ -57,17 +57,6 @@ const LoginPage: React.FC = () => {
     }
   };
 
-  const fillTestAccount = (type: 'influencer' | "company") => {
-    if (type === 'influencer') {
-      setEmail('influencer1@example.com');
-      setPassword('password123');
-      setAccountType('influencer');
-    } else {
-      setEmail('client1@example.com');
-      setPassword('password123');
-      setAccountType('company');
-    }
-  };
 
   if (!isMounted) {
     return (
@@ -109,34 +98,6 @@ const LoginPage: React.FC = () => {
           ログイン
         </SubmitButton>
       </form>
-
-      <div className="mt-6">
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-300" />
-          </div>
-          <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-white text-gray-500">テストアカウント</span>
-          </div>
-        </div>
-
-        <div className="mt-4 grid grid-cols-2 gap-3">
-          <button
-            type="button"
-            onClick={() => fillTestAccount('influencer')}
-            className="px-4 py-2 bg-emerald-50 text-emerald-700 rounded-md text-sm font-medium hover:bg-emerald-100 transition-colors border border-emerald-200"
-          >
-            インフルエンサー
-          </button>
-          <button
-            type="button"
-            onClick={() => fillTestAccount("company")}
-            className="px-4 py-2 bg-emerald-50 text-emerald-700 rounded-md text-sm font-medium hover:bg-emerald-100 transition-colors border border-emerald-200"
-          >
-            企業
-          </button>
-        </div>
-      </div>
 
       <div className="mt-6 text-center text-sm">
         <p className="text-gray-600">
